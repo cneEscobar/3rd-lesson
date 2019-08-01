@@ -19,6 +19,9 @@ public class Loader
         System.out.println("===============================");
 
         Cat clonVasya = vasya.createClone();
+        System.out.println("Вес Клона Васи до туалета: " + clonVasya.getWeight());
+        clonVasya.toilet();
+        System.out.println("Вес Клона Васи после туалета: " + clonVasya.getWeight());
 
         ravenstvo = vasya.equals(clonVasya);
         System.out.println(ravenstvo);

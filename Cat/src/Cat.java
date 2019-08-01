@@ -13,6 +13,7 @@ public class Cat
     private static int count;
     private ColorCats color;
 
+
     public Cat()
     {
         count++;
