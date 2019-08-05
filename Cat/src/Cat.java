@@ -28,13 +28,15 @@ public class Cat
         count++;
         this.weight = weight;
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
+        minWeight = MIN_WEIGHT_COUNT;
+        maxWeight = MAX_WEIGHT_COUNT;
     }
 
     public static Cat createClone (Cat donor)  {
         Cat cat = new Cat(donor.weight);
         cat.originWeight  = donor.originWeight;
+        cat.maxWeight = MAX_WEIGHT_COUNT;
+        cat.minWeight = MIN_WEIGHT_COUNT;
         cat.eatenFood = donor.eatenFood;
         return cat;
     }

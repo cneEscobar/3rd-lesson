@@ -4,7 +4,7 @@ public class Loader
     public static void main(String[] args)
     {
         boolean ravenstvo;
-        Cat vasya = new Cat();
+        Cat vasya = new Cat(3500.1);
         Cat pasha = new Cat();
         System.out.println("Вес Васи: " + vasya.getWeight());
         System.out.println("Вес Паши: " + pasha.getWeight());
@@ -13,20 +13,15 @@ public class Loader
         pasha.meow();
         System.out.println("Вес Паши после мяуканья: " + pasha.getWeight());
         pasha.feed(231222);
-        System.out.println("Вес Паши после кормления: " + pasha.getWeight());
+        System.out.println("Паша поел кол-во еды: " +pasha.getAmountFeed() + " и вес Паши после кормления: " + pasha.getWeight());
         System.out.println("Статус Паши: " + pasha.getStatus());
         System.out.println("Кол-во кошек: "+Cat.getCount());
         System.out.println("===============================");
 
         Cat clonVasya = vasya.createClone();
-        System.out.println("Вес Клона Васи до туалета: " + clonVasya.getWeight());
+        System.out.println("Вес Клона Васи: " + clonVasya.getWeight());
         clonVasya.toilet();
         System.out.println("Вес Клона Васи после туалета: " + clonVasya.getWeight());
-
-        ravenstvo = vasya.equals(clonVasya);
-        System.out.println(ravenstvo);
-        System.out.println(vasya==clonVasya);
-
         System.out.println("Вес Васи: " + vasya.getWeight());
         System.out.println("Вес Клона Васи: " + clonVasya.getWeight());
         System.out.println("Кол-во кошек: "+Cat.getCount());
@@ -37,6 +32,15 @@ public class Loader
         System.out.println("Вес Васи после кормления: " + vasya.getWeight());
         System.out.println("Вес Клона Васи: " + clonVasya.getWeight());
         System.out.println("===============================");
+
+        ravenstvo = vasya.equals(clonVasya);
+        System.out.println(ravenstvo);
+        System.out.println(vasya==clonVasya);
+        /*
+        если сравнивать объекты друг с другом - то проверяется, одинакова ли ссылка этих 2 объектов
+        в моем случае, ссылки разные. Но содержимое одинаково.
+        Вывод: объекты разные (оба объекта ссылаются по-разному), но одинаковы по содержанию.
+         */
 
         do {
             clonVasya.meow();
@@ -56,15 +60,6 @@ public class Loader
         System.out.println("Вес котёнка: " + kitten.getWeight());
         System.out.println("Кол-во кошек: " + Cat.getCount());
         System.out.println("===============================");
-
-        ravenstvo = vasya.equals(clonVasya);
-        System.out.println(ravenstvo);
-        System.out.println(vasya==clonVasya);
-        /*
-        если сравнивать объекты друг с другом - то проверяется, одинакова ли ссылка этих 2 объектов
-        в моем случае, ссылки разные. Но содержимое одинаково.
-        Вывод: объекты разные (оба объекта ссылаются по-разному), но одинаковы по содержанию.
-         */
     }
 
 
