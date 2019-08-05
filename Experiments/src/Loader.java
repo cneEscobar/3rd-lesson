@@ -5,7 +5,7 @@ public class Loader {
     public static void main(String[] args) {
         Airport airport = Airport.getInstance();
         System.out.println(airport.getAllAircrafts());
-        System.out.println();
+        System.out.println("Number of aircraft: " + airport.getAllAircrafts().size());
     }
 
 }
